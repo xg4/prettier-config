@@ -15,10 +15,22 @@
   },
   "license": "MIT",
   "author": "xg4 <xingor4@gmail.com> (https://github.com/xg4)",
-  "main": "index.json",
+  "type": "module",
+  "exports": "./index.js",
+  "main": "index.js",
   "files": [
-    "index.json"
+    "index.js"
   ],
+  "scripts": {
+    "test": "prettier --config ./index.js --check examples/",
+    "test:update": "prettier --config ./index.js --write examples/"
+  },
+  "dependencies": {
+    "prettier-plugin-tailwindcss": "0.4.1"
+  },
+  "devDependencies": {
+    "prettier": "3.0.0"
+  },
   "publishConfig": {
     "access": "public"
   }
